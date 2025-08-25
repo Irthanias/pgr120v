@@ -9,7 +9,7 @@
   $kurs=95.41;
   if($NOK){
     $CLPr=$NOK*$kurs;
-    print("$NOK NOK er lik $CLPr CLP") ;
+    print("$NOK NOK er lik $CLPr CLP <br/>") ;
   }
   if($CLP){
     $NOKr=$CLP/$kurs;
