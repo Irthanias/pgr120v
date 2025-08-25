@@ -6,7 +6,7 @@
   $tall1=$_POST ["tall1"];
   $tall2=$_POST ["tall2"];  /* variable gitt verdier fra feltene i HTML-skjemaet */
 	
-  $sum=$tall1 + $tall2   /* beregning av summen utført  */
+  $sum=$tall1 + $tall2;  /* beregning av summen utført  */
   $differanse=$tall1 - $tall2;  /* beregning av differansen utført  */
 			
   print ("Tall 1 er $tall1 <br />");
