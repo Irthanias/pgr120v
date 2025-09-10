@@ -8,5 +8,5 @@ if ($svar == 9)
 }
 else
 {
-    print("Feil. Prøv igjen");
+    print("$svar er Feil. Prøv igjen");
 }
