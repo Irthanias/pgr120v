@@ -13,7 +13,7 @@
 
 <div>
 <?php
-if (isset($_GET ["svar"]))
+if (isset($_GET ["fortsett"]))
 {
 $svar=$_GET ["svar"];
 
