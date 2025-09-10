@@ -10,3 +10,5 @@ else
 {
     print("$svar er Feil. Prøv igjen");
 }
+
+?>
