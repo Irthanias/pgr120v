@@ -15,8 +15,4 @@ else
     print("Skriv gyldig svar");
 }
 
-
-
-
-
 ?>
