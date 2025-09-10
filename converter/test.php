@@ -1,7 +1,4 @@
 <?php
-$tall1=4;
-$tall2=5;
-
 if ($tall1=$tall2)
   {
     print("Tallene er like");
