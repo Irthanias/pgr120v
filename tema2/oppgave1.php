@@ -11,9 +11,7 @@
     <input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
     <input type="reset" value="Nullstill" name="nullstill" id="nullstill" /> <br />
 
-</body>
-</html>
-
+    <div>
 <?php
 if (isset($_POST ["fortsett"]))
 {
@@ -29,3 +27,6 @@ else
 }
 }
 ?>
+</div>
+</body>
+</html>
