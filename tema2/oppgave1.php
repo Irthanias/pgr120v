@@ -15,9 +15,9 @@
 </html>
 
 <?php
-if (isset($_GET ["fortsett"]))
+if (isset($_POST ["fortsett"]))
 {
-$svar=$_GET ["svar"];
+$svar=$_POST ["svar"];
 
 if ($svar == 9)
 {
