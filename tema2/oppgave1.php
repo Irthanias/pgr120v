@@ -12,8 +12,9 @@
     <input type="reset" value="Nullstill" name="nullstill" id="nullstill" /> <br />
 
 <div>
-    <?php
-
+<?php
+if (isset($_GET ["svar"]))
+{
 $svar=$_GET ["svar"];
 
 if ($svar == 9)
@@ -24,7 +25,7 @@ else
 {
     print("$svar er Feil. Prøv igjen");
 }
-
+}
 ?>
 </div>
 </body>
