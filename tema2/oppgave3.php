@@ -1,12 +1,12 @@
 <?php
 
 $svar=$_POST ["svar"];
-
-if ($svar == "ja" or $svar == "j" or $svar == "JA" or $svar == "J" or $svar == "Ja")
+$svar = strtolower ($svar);
+if ($svar == "ja" or $svar == "j")
 {
     print("Du har svart ja på sp&oslash;rsm&aring;let om du er student");
 }
-elseif ($svar == "nei" or $svar == "n" or $svar == "NEI" or $svar == "N" or $svar == "Nei")
+elseif ($svar == "nei" or $svar == "n")
 {
     print("Du har svart nei på sp&oslash;rsm&aring;let om du er student");
 }
