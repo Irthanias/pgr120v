@@ -12,7 +12,7 @@ elseif ($svar == "nei")
 }
 else
 {
-    print("Skriv gyldig svar")
+    print("Skriv gyldig svar");
 }
 
 
