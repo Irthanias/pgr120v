@@ -1,6 +1,6 @@
 <?php
-$tall1=4
-$tall2=4
+$tall1=4;
+$tall2=4;
 
 if ($tall1=$tall2)
   {
