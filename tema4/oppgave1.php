@@ -1,6 +1,6 @@
 <?php    
 
-$postnr=$_POST ["postnr"]
+$postnr=$_POST ["postnr"];
 
 else if (!$postnr)
 {
