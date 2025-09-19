@@ -19,7 +19,7 @@ if (!ctype_digit($postnr))
 
 else
 {
-    print("Postnr er korrekt")
+    print("Postnr er korrekt");
 }
 
 ?>
