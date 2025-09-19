@@ -7,12 +7,13 @@ $klassekode=$_POST ["klassekode"];
     {
       print("Klassekode er ikke fylt ut <br />");
     }
+
   else if (strlen($klassekode)!=3)  /* klassekode består ikke av 3 tegn */
     {
-      
       print("Klassekode best&aring;r ikke av 3 tegn <br />");
     }
-  else if
+
+  if
     {
       $tegn1=$klassekode[0];   /* første tegn i klassekoden  */
       $tegn2=$klassekode[1];   /* andre tegn i klassekoden  */
