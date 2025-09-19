@@ -2,14 +2,17 @@
 
 $klassekode=$_POST ["klassekode"];
 
+$riktig=true;
 
   if (!$klassekode)  /* klassekode er ikke fylt ut */
     {
+        $riktig=false;
       print("Klassekode er ikke fylt ut <br />");
     }
 
   else if (strlen($klassekode)!=3)  /* klassekode består ikke av 3 tegn */
     {
+        $riktig=false;
       print("Klassekode best&aring;r ikke av 3 tegn <br />");
     }
 
@@ -21,24 +24,24 @@ $klassekode=$_POST ["klassekode"];
 
       if (!ctype_alpha($tegn1))  /* tegn1 er ikke bokstav */ 
         {
-          
+          $riktig=false;
           print("F&oslash;rste tegn er ikke en bokstav <br />");
         }
 		
       if (!ctype_alpha($tegn2))  /* tegn2 er ikke bokstav */
         {
-          
+          $riktig=false;
           print("Andre tegn er ikke en bokstav <br />");
         }
 		
       if (!ctype_digit($tegn3))  /* tegn3 er ikke et siffer */ 
         {
-          
+          $lovligKlassekode=false;
           print("Siste tegn er ikke et siffer  <br />");
         }
     }
 
-  else
+  if ($riktig)
     {
       print("Klassekode er korrekt fylt ut <br />");
     }
