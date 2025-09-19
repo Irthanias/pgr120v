@@ -2,7 +2,7 @@
 
 $postnr=$_POST ["postnr"]
 
-if (!$postnr)
+else if (!$postnr)
 {
      print("Postnr er ikke fylt ut");
 }
