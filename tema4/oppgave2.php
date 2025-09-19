@@ -1,6 +1,6 @@
 <?php    
 
-$postnr=$_POST ["postnr"];
+$klassekode=$_POST ["klassekode"];
 
 if (!$postnr)
 {
