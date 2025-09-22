@@ -11,6 +11,7 @@
   Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
+  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -21,8 +22,9 @@
       $brukernavn=$_POST ["brukernavn"];
       $fornavn=$_POST ["fornavn"];
       $etternavn=$_POST ["etternavn"];
+      $klasseKode=$_POST ["klassekode"];
 
-      if (!$brukernavn || !$fornavn || $etternavn ) 
+      if (!$brukernavn || !$fornavn || $etternavn || $klasseKode) 
         {
           print ("Brukernavn, fornavn og etternavn kode m&aring; fylles ut");
         }
@@ -36,15 +38,15 @@
 
           if ($antallRader!=0)  /* data er registrert fra før */
             {
-              print ("Data er registrert fra f&oslashr");
+              print ("Student er registrert fra f&oslashr");
             }
           else
             {
-              $sqlSetning="INSERT INTO klasse VALUES('$klasseKode','$klasseNavn','$studiumKode');";
+              $sqlSetning="INSERT INTO student VALUES('$brukernavn','$fornavn','$etternavn','$klasseKode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende data er n&aring; registrert: $brukernavn, $fornavn og $etternavn"); 
+              print ("F&oslash;lgende data er n&aring; registrert: $brukernavn, $fornavn, $etternavn og $klasseKode"); 
             }
         }
     }
