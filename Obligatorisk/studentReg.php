@@ -22,7 +22,9 @@ while(
     $rad=mysqli_fetch_row($sqlResultat)
 )
 {
-    print("<option value=\"$rad["klassekode"]\">$rad["klasssenavn"]</option>");
+    $klasseKode=$rad["klassekode"];
+    $klasseNavn=$rad["klasssenavn"];
+    print("<option value=\"$klasseKode\">$klasseNavn</option>");
 }
 ?>
 
