@@ -36,11 +36,11 @@
 
           if ($antallRader!=0)  /* poststedet er registrert fra før */
             {
-              print ("Poststedet er registrert fra f&oslashr");
+              print ("Data er registrert fra f&oslashr");
             }
           else
             {
-              $sqlSetning="INSERT INTO poststed VALUES('$klasseKode','$klasseNavn','$studieKode');";
+              $sqlSetning="INSERT INTO klasse VALUES('$klasseKode','$klasseNavn','$studieKode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
