@@ -9,8 +9,8 @@
 
 <form method="post" action="" id="registrerKlasseSkjema" name="registrerKlasseSkjema">
   Klassekode <input type="text" id="klasseKode" name="klasseKode" required /> <br/>
-  KlasseNavn <input type="text" id="klasseNavn" name="klasseNavn" required /> <br/>
-  StudieKode <input type="text" id="studieKode" name="studieKode" required /> <br/>
+  Klassenavn <input type="text" id="klasseNavn" name="klasseNavn" required /> <br/>
+  Studiekode <input type="text" id="studieKode" name="studieKode" required /> <br/>
   <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -30,7 +30,7 @@
         {
           include("db-kobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-          $sqlSetning="SELECT * FROM klasseNavn WHERE klasseKode='$klasseKode';";
+          $sqlSetning="SELECT * FROM klasse WHERE klasseKode='$klasseKode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
@@ -40,11 +40,11 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO poststed VALUES('$postnr','$poststed');";
+              $sqlSetning="INSERT INTO poststed VALUES('$klasseKode','$klasseNavn','$studieKode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende poststed er n&aring; registrert: $postnr $poststed"); 
+              print ("F&oslash;lgende data er n&aring; registrert: $klasseKode, $klasseNavn og $studieKode"); 
             }
         }
     }
