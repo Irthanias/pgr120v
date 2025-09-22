@@ -13,7 +13,7 @@ include("db-kobling.php");
   Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
   <!--Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>-->
-  <select name="klassekode">
+  Klasse<select id="klassekode" name="klassekode" required>
 <?php
 $sqlSetning="SELECT klassekode, klasssenavn FROM klasse ORDER BY klassekode";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
@@ -30,7 +30,7 @@ while(
 ?>
 
 </select>
-
+<br/>
 
   <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />

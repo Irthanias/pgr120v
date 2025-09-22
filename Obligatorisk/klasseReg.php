@@ -20,7 +20,7 @@
     {
       $klasseKode=$_POST ["klasseKode"];
       $klasseNavn=$_POST ["klasseNavn"];
-      $studiumKode=$_POST ["studiumKode"];
+      $studieKode=$_POST ["studieKode"];
 
       if (!$klasseKode || !$klasseNavn || !$studiumKode ) 
         {
@@ -40,11 +40,11 @@
             }
           else
             {
-              $sqlSetning="INSERT INTO klasse VALUES('$klasseKode','$klasseNavn','$studiumKode');";
+              $sqlSetning="INSERT INTO klasse VALUES('$klasseKode','$klasseNavn','$studieKode');";
               mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
                 /* SQL-setning sendt til database-serveren */
 
-              print ("F&oslash;lgende data er n&aring; registrert: $klasseKode, $klasseNavn og $studiumKode"); 
+              print ("F&oslash;lgende data er n&aring; registrert: $klasseKode, $klasseNavn og $studieKode"); 
             }
         }
     }
