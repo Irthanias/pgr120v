@@ -26,7 +26,7 @@
 
       if (!$brukernavn || !$fornavn || $etternavn || $klasseKode) 
         {
-          print ("Brukernavn, fornavn og etternavn kode m&aring; fylles ut");
+          print ("Brukernavn, fornavn, etternavn og klassekode m&aring; fylles ut");
         }
       else
         {
