@@ -3,6 +3,7 @@
 /*  Programmet lager et html-skjema for å registrere et poststed
 /*  Programmet registrerer data (postnr og poststed) i databasen
 */
+include("db-kobling.php");
 ?> 
 
 <h3>Registrer Student </h3>
@@ -11,7 +12,23 @@
   Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
-  Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
+  <!--Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>-->
+  <select name="klassekode">
+<?php
+$sqlSetning="SELECT klassekode, klasssenavn FROM klasse ORDER BY klassekode";
+$sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
+
+while(
+    $rad=mysqli_fetch_row($sqlResultat)
+)
+{
+    print("<option value=\"$rad["klassekode"]\">$rad["klasssenavn"]</option>");
+}
+?>
+
+</select>
+
+
   <input type="submit" value="Registrer student" id="registrerStudentKnapp" name="registrerStudentKnapp" /> 
   <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
 </form>
@@ -30,7 +47,7 @@
         }
       else
         {
-          include("db-kobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
+            /* tilkobling til database-serveren utført og valg av database foretatt */
 
           $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
