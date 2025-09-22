@@ -17,7 +17,7 @@ for ($r=1;$r<=$antallRader;$r++)
     $rad=mysqli_fetch_array($sqlResultat);
     var_dump($rad);
     $klasseKode=$rad["klassekode"];
-    $klasseNavn=$rad["klassenavn"];
+    $klasseNavn=$rad["klasssenavn"];
     $studiumKode=$rad["studiumkode"];
 
     print ("<tr> <td> $klasseKode </td> <td> $klasseNavn </td> <td> $studiumKode </td> </tr>");
