@@ -1,4 +1,22 @@
 <?php
+?>
+
+<form method="post" action="" id="registrerKlasseSkjema" name="registrerKlasseSkjema">
+  Klassekode <input type="text" id="klasseKode" name="klasseKode" required /> <br/>
+  Klassenavn <input type="text" id="klasseNavn" name="klasseNavn" required /> <br/>
+  Studiekode <input type="text" id="studieKode" name="studieKode" required /> <br/>
+  <input type="submit" value="Registrer klasse" id="registrerKlasseKnapp" name="registrerKlasseKnapp" /> 
+  <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br />
+</form>
+
+
+<?php
+  if (isset($_POST ["registrerKlasseKnapp"]))
+    {
+      $klasseKode=$_POST ["klasseKode"];
+      $klasseNavn=$_POST ["klasseNavn"];
+      $studiumKode=$_POST ["studiumKode"];
+    }
 
 include("db-kobling.php");
 
