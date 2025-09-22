@@ -15,9 +15,9 @@ print ("<tr><th align=left>Klassekode</th> <th align=left>Klassenavn</th> <th al
 for ($r=1;$r<=$antallRader;$r++)
 {
     $rad=mysqli_fetch_array($sqlResultat);
-    $klasseKode=$rad["klasseKode"];
-    $klasseNavn=$rad["klasseNavn"];
-    $studieKode=$rad["studieKode"];
+    $klasseKode=$rad["klassekode"];
+    $klasseNavn=$rad["klassenavn"];
+    $studieKode=$rad["studiumkode"];
 
     print ("<tr> <td> $klasseKode </td> <td> $klasseNavn </td> <td> $studieKode </td> </tr>");
 }
