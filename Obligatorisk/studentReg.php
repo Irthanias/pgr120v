@@ -17,7 +17,7 @@
 </form>
 
 <?php 
-  if (isset($_POST ["registrerstudentKnapp"]))
+  if (isset($_POST ["registrerStudentKnapp"]))
     {
       $brukernavn=$_POST ["brukernavn"];
       $fornavn=$_POST ["fornavn"];
