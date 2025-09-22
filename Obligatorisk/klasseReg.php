@@ -20,7 +20,7 @@
     {
       $klasseKode=$_POST ["klasseKode"];
       $klasseNavn=$_POST ["klasseNavn"];
-      $studieKode=$_POST ["studieNavn"];
+      $studieKode=$_POST ["studieKode"];
 
       if (!$klasseKode || !$klasseNavn)
         {
@@ -34,7 +34,7 @@
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
-          if ($antallRader!=0)  /* poststedet er registrert fra før */
+          if ($antallRader!=0)  /* data er registrert fra før */
             {
               print ("Data er registrert fra f&oslashr");
             }
