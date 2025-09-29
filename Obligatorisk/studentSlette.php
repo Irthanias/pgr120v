@@ -22,7 +22,7 @@
   if (isset($_POST ["slettStudentKnapp"]))
     {
       $brukernavn=$_POST ["brukernavn"];
-      $klasseKode=$POST ["klassekode"];	  
+      
 	  
       if (!$brukernavn)
         {
@@ -37,7 +37,7 @@
           mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
             /* SQL-setning sendt til database-serveren */
 		
-          print ("F&oslash;lgende klasse er n&aring; slettet: $brukernavn  $klasseKode.<br />");
+          print ("F&oslash;lgende klasse er n&aring; slettet: $brukernavns.<br />");
         }	
     }
 ?> 
