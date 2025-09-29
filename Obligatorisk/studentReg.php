@@ -58,7 +58,7 @@ while(
 
           if ($antallRader!=0)  /* data er registrert fra før */
             {
-              print ("Student er registrert fra f&oslashr");
+              print ("Student $brukernavn er registrert fra f&oslashr");
             }
           else
             {
