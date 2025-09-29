@@ -12,8 +12,8 @@ include("db-kobling.php");
   Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
-  <!--Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>-->
-  Klasse<select id="klassekode" name="klassekode" required>
+  
+  Klasse <select id="klassekode" name="klassekode" required>
 <?php
 $sqlSetning="SELECT klassekode, klassenavn FROM klasse ORDER BY klassekode";
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
