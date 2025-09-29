@@ -38,10 +38,11 @@
 
           if ($antallRader!=0)  /* data er registrert fra før */
             {
-              print ("Klase med klassekode $klasseKode er ikke tom");
+              print ("Klasse med klassekode $klasseKode er ikke tom");
             }
-          else
-
+          
+            else
+        {
           $sqlSetning="DELETE FROM klasse WHERE klassekode='$klasseKode';";
           mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
             /* SQL-setning sendt til database-serveren */
