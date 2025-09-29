@@ -39,7 +39,7 @@
           if ($antallRader!=0)  /* data er registrert fra før */
             {
               print ("Klase med klassekode $klasseKode er ikke tom");
-          
+            }
           else
 
           $sqlSetning="DELETE FROM klasse WHERE klassekode='$klasseKode';";
