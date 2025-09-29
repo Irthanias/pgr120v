@@ -36,7 +36,7 @@
 
           if ($antallRader!=0)  /* data er registrert fra før */
             {
-              print ("Data er registrert fra f&oslashr");
+              print ("Klassekoden $klasseKode er registrert fra f&oslashr");
             }
           else
             {

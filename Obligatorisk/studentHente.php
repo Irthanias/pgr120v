@@ -2,7 +2,7 @@
 
 include("db-kobling.php");
 
-$sqlSetning="SELECT student.brukernavn , student.fornavn , student.etternavn , klasse.klasssenavn FROM student INNER JOIN klasse ON student.klassekode = klasse.klassekode;";
+$sqlSetning="SELECT student.brukernavn , student.fornavn , student.etternavn , klasse.klassenavn FROM student INNER JOIN klasse ON student.klassekode = klasse.klassekode;";
 
 $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
 
