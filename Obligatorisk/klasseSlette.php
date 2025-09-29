@@ -31,7 +31,7 @@
         {	  		 
           include("db-kobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
 
-	      $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klasseKode';";
+	      $sqlSetning="SELECT * FROM student WHERE klassekode='$klasseKode';";
           $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
           $antallRader=mysqli_num_rows($sqlResultat); 
 
