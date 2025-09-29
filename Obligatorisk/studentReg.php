@@ -12,7 +12,6 @@ include("db-kobling.php");
   Brukernavn <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
   Fornavn <input type="text" id="fornavn" name="fornavn" required /> <br/>
   Etternavn <input type="text" id="etternavn" name="etternavn" required /> <br/>
-  
   Klasse <select id="klassekode" name="klassekode" required>
 <?php
 $sqlSetning="SELECT klassekode, klassenavn FROM klasse ORDER BY klassekode";

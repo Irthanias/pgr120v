@@ -12,7 +12,6 @@
 <form method="post" action="" id="slettKlasseSkjema" name="slettKlasseSkjema" onSubmit="return bekreft()">
   Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
   <input type="submit" value="Slett klasse" name="slettKlasseKnapp" id="slettKlasseKnapp" /> 
-</form>
 
 <?php
 
@@ -27,7 +26,14 @@ while(
     $klasseKode=$rad[0];
     print("<option value=\"$klasseKode\">$klasseKode</option>");
 }
+?>
+</select>
+</br>
+    <input type="submit" value="Slett Klasse" id="slettStudentKnapp" name="slettStudentKnapp" />
+    <input type="reset" value="Nullstill" id="nullstill" name="nullstill" /> <br/>
 
+</form>
+<?php
   if (isset($_POST ["slettKlasseKnapp"]))
     {	
       $klasseKode=$_POST ["klassekode"];
