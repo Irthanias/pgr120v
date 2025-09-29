@@ -8,7 +8,7 @@ $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; he
 
 $antallRader=mysqli_num_rows($sqlResultat);
 
-print ("<h3>Registrerte klasser</h3>");
+print ("<h3>Registrerte studenter</h3>");
 print ("<table border=1>");
 print ("<tr><th align=left>Brukernavn</th> <th align=left>Fornavn</th> <th align=left>Etternavn</th> <th align=left>Klassenavn</th> <th>Klassekode</th></tr>");
 
