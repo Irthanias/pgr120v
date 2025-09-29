@@ -31,7 +31,17 @@
       else
         {	  		 
           include("db-kobling.php");  /* tilkobling til database-serveren utført og valg av database foretatt */
-	
+
+	      $sqlSetning="SELECT * FROM klasse WHERE klassekode='$klasseKode';";
+          $sqlResultat=mysqli_query($db,$sqlSetning) or die ("Det er ikke mulig &aring; hente data fra databasen");
+          $antallRader=mysqli_num_rows($sqlResultat); 
+
+          if ($antallRader!=0)  /* data er registrert fra før */
+            {
+              print ("Klase med klassekode $klasseKode er ikke tom");
+          
+          else
+
           $sqlSetning="DELETE FROM klasse WHERE klassekode='$klasseKode';";
           mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
             /* SQL-setning sendt til database-serveren */
