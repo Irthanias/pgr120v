@@ -19,8 +19,7 @@
 </form>
 
 <?php
-  if (isset($_POST ["slettKlasseKnapp"]))
-    {
+  if (isset($_POST ["slettKlasseKnapp"])) {
       $klasseKode=$_POST ["klassekode"];	  
 	  
       if (!$klasseKode)
@@ -40,9 +39,7 @@
             {
               print ("Klasse med klassekode $klasseKode er ikke tom");
             }
-          
-            else
-        {
+          else{
           $sqlSetning="DELETE FROM klasse WHERE klassekode='$klasseKode';";
           mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; slette data i databasen");
             /* SQL-setning sendt til database-serveren */
@@ -50,4 +47,5 @@
           print ("F&oslash;lgende klasse er n&aring; slettet: $klasseKode  <br />");
         }	
     }
+}
 ?> 
