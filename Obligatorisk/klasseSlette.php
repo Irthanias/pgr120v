@@ -3,6 +3,7 @@
 /*  Programmet lager et skjema for å velge et poststed som skal slettes  
 /*  Programmet sletter det valgte poststedet
 */
+include("db-kobling.php");
 ?> 
 
 <script src="function.js"> </script>
